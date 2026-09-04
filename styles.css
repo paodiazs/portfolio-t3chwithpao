@@ -648,7 +648,7 @@ footer{
 }
 
 /* =========================================================
-   PROJECT / BLOG DETAIL
+   PROJECTS DETAIL STYLES
    ========================================================= */
 .detail-hero{
   display:grid;
@@ -834,7 +834,86 @@ footer{
   .about-stats{ grid-template-columns:1fr 1fr; }
 }
 
+/* ---------- SECCIÓN INSTAGRAM SHOWCASE ---------- */
 
+.ig-showcase-section {
+  width: 100%;
+  padding: 60px 0;
+  /* Cambia este color de fondo según prefieras */
+  background-image: url("assets/fondo-insta3.jpeg"); 
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Grilla de 3 columnas para Desktop */
+.ig-showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.ig-col-title {
+  text-align: center;
+}
+
+.ig-col-title h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.ig-handle {
+  font-family: var(--mono, monospace);
+  font-size: 1rem;
+  color: var(--blue, #2563eb);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.ig-handle:hover {
+  text-decoration: underline;
+}
+
+/* Contenedor del Iframe */
+.ig-col-embed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.ig-col-embed iframe {
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  background: #001fff;
+}
+
+.ig-col-caption {
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: white;
+}
+
+/* Apilado vertical*/
+@media (max-width: 850px) {
+  .ig-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .ig-col-embed {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .ig-col-caption {
+    max-width: 40ch;
+    margin: 0 auto;
+  }
+}
 
 /* ---------- cards grid (blog/projects) ---------- */
 .card-grid{
